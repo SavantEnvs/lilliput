@@ -1,0 +1,9 @@
+project: savantenvs/lilliput
+target: fuzz_avcodec
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_avcodec/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_avcodec
+    libfuzzer: true
+    timeout: 10

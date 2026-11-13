@@ -1,0 +1,9 @@
+project: savantenvs/lilliput
+target: fuzz_opencv
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_opencv/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_opencv
+    libfuzzer: true
+    timeout: 10

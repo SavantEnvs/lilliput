@@ -1,0 +1,8 @@
+# Per-Dockerfile ignore for `docker build -f mayhem/Dockerfile .`. The build context keeps .git (the
+# grader needs full history) and everything build.sh/test.sh read, including the prebuilt static
+# libraries under deps/ that the repo commits; only local build output is dropped.
+mayhem/build/
+**/__pycache__/
+.DS_Store
+*.swp
+*~
